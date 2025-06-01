@@ -77,10 +77,18 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+*/.ipynb_checkpoints/*
+**/.ipynb_checkpoints/
+
+# Jupyter notebook output files (optional - remove if you want to commit outputs)
+# *.ipynb
 
 # IPython
 profile_default/
 ipython_config.py
+
+# Jupyter Lab settings
+.jupyter/
 
 # pyenv
 #   For a library or package, you might want to ignore these files since the code is
@@ -174,10 +182,16 @@ cython_debug/
 .abstra/
 
 # Visual Studio Code
-#  Visual Studio Code specific template is maintained in a separate VisualStudioCode.gitignore 
+#  Visual Studio Code specific template is maintained in a separate VisualStudioCode.gitignore
 #  that can be found at https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
-#  and can be added to the global gitignore or merged into this file. However, if you prefer, 
+#  and can be added to the global gitignore or merged into this file. However, if you prefer,
 #  you could uncomment the following to ignore the enitre vscode folder
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+.vscode/.ropeproject
+# Keep workspace settings but ignore personal settings
 # .vscode/
 
 # Ruff stuff:
@@ -192,3 +206,52 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# Project-specific: GTFS Transit Analysis
+# =====================================
+# Model files and artifacts
+models/
+*.pkl
+*.joblib
+*.h5
+*.hdf5
+*.model
+
+# Temporary analysis files
+temp/
+tmp/
+scratch/
+sandbox/
+
+# Large data processing files
+*.parquet
+*.feather
+*.hdf
+*.nc
+
+# Machine learning experiment tracking
+mlruns/
+experiments/
+wandb/
+.neptune/
+
+# Data science and analysis
+*.ipynb_checkpoints
+.DS_Store
+Thumbs.db
+
+# Configuration files with sensitive data
+config/local.py
+config/secrets.py
+.secrets
+*.key
+api_keys.txt
+
+# Log files
+logs/
+*.log
+
+# Cache directories
+.cache/
+__pycache__/
+.pytest_cache/
