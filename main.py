@@ -11,10 +11,10 @@ import os
 import sys
 from pathlib import Path
 
-from data_processing import GTFSProcessor
-from prediction import DelayPredictor, DemandForecaster
-from routing import TransitRouter
-from visualization import TransitVisualizer
+from src.data_processing import GTFSProcessor
+from src.prediction import DelayPredictor, DemandForecaster
+from src.routing import TransitRouter
+from src.visualization import TransitVisualizer
 
 # Add src directory to path
 src_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "src")
