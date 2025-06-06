@@ -136,7 +136,7 @@ Examples:
             if "degree" in centrality:
                 top_stops = sorted(
                     centrality["degree"].items(), key=lambda x: x[1], reverse=True
-                )[:5]
+                )[:15]
                 logger.info("Top 5 stops by degree centrality:")
                 for i, (stop_id, score) in enumerate(top_stops, 1):
                     logger.info(f"  {i}. {stop_id}: {score}")

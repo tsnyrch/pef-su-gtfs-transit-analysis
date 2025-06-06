@@ -72,7 +72,6 @@ GTFS/
 ├── outputs/                       # Generated files
 │   ├── transit_dashboard.html
 │   └── transit_network_map.html
-├── requirements.txt               # Python dependencies
 └── README.md                     # This file
 ```
 
@@ -95,7 +94,7 @@ cd pef-su-gtfs-transit-analysis
 2. **Install dependencies**
 
 ```bash
-pip install -r requirements.txt
+pip install pandas numpy networkx geopy scikit-learn matplotlib seaborn plotly folium jupyter
 ```
 
 3. **Prepare GTFS data**
@@ -316,7 +315,7 @@ We welcome contributions! Please see our contributing guidelines:
 
 ```bash
 # Install development dependencies
-pip install -r requirements.txt
+pip install pandas numpy networkx geopy scikit-learn matplotlib seaborn plotly folium jupyter
 pip install pytest flake8 black
 
 # Run tests
